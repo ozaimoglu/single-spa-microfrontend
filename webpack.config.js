@@ -9,9 +9,9 @@ module.exports = {
     'single-spa.config': './single-spa.config.js',
   },
   output: {
-    publicPath: '/dist/',
+    publicPath: '/public/',
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
