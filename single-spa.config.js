@@ -33,7 +33,7 @@ registerApplication(
 
 registerApplication({
   name: "trivia-app",
-  app: () => import('./src/trivia-app/src/react-mf-trivia.js'),
+  app: () => import('./src/Trivia-React/src/react-mf-trivia.js'),
   activeWhen: "/gameMenu",
 });
 
