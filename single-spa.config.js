@@ -31,4 +31,10 @@ registerApplication(
   () => location.pathname === "/todo" ? true : false
 );
 
+registerApplication({
+  name: "trivia-app",
+  app: () => import('./src/trivia-app/src/react-mf-trivia.js'),
+  activeWhen: "/gameMenu",
+});
+
 start();

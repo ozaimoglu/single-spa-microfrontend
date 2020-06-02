@@ -17,7 +17,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }, {
         test: /\.js$/,
         exclude: [path.resolve(__dirname, 'node_modules')],
@@ -26,7 +26,23 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
-      }
+      },
+      {
+        test: /\.(sass|css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [
+                require("autoprefixer")()
+              ],
+            },
+          },
+          'sass-loader',
+        ]
+      },
     ],
   },
   node: {
