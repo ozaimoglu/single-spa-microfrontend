@@ -1,22 +1,20 @@
 import React from 'react';
 import { Container, Col, Row, Button, Form } from 'react-bootstrap';
 
-class HomeComponent extends React.Component {
+class TodoComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-           
+
         }
     }
-
-
     render() {
         return (
             <Container>
-                HOME
+                TODO
             </Container>
         );
     }
 }
 
-export default HomeComponent;
+export default TodoComponent;

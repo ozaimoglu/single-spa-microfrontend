@@ -1,22 +1,25 @@
 import React from 'react';
 import { Container, Col, Row, Button, Form } from 'react-bootstrap';
 
-class HomeComponent extends React.Component {
+class MoviesComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-           
+
         }
     }
 
+    componentDidMount() {
+
+    }
 
     render() {
         return (
             <Container>
-                HOME
+                MOVIES
             </Container>
         );
     }
 }
 
-export default HomeComponent;
+export default MoviesComponent;
