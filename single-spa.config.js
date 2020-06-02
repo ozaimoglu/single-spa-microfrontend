@@ -4,7 +4,7 @@ import { registerApplication, start } from 'single-spa'
 registerApplication(
   'login-react',
   () => import('./src/Login-React/main.app.js'),
-  () => location.pathname === "/login"  ? true : false
+  () => location.pathname === "/"  ? true : false
 );
 
 registerApplication(
@@ -16,7 +16,7 @@ registerApplication(
 registerApplication(
   'navbar-react', 
   () => import('./src/Navbar-React/main.app.js'),
-  () => location.pathname !== "/login" ? true : false
+  () => location.pathname !== "/" ? true : false
 );
 
 registerApplication(
