@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Col, Row, Button, Form } from 'react-bootstrap';
-import '../../App.css';
+import "../../App.scss"
 
 const username = "admin";
 const password = "admin"
@@ -36,7 +36,7 @@ class HeaderComponent extends React.Component {
 
     render() {
         return (
-            <Container>
+            <Container className="mainContainer">
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Col, Row, Button, Form } from 'react-bootstrap';
+import { Container, Col, Row, Button, Form, Navbar, Nav } from 'react-bootstrap';
+import "../../App.scss"
 
 class NavbarComponent extends React.Component {
     constructor(props) {
@@ -18,31 +19,22 @@ class NavbarComponent extends React.Component {
     }
 
     gotoTodoPage() {
-        location.pathname = "/todo";
+        location.pathname = "/gameMenu";
     }
 
 
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col>
-                        <Button onClick={this.gotoHomePage}>
-                            HOME
-                        </Button>
-                    </Col>
-                    <Col>
-                        <Button onClick={this.gotoMoviesPage}>
-                            MOVIES
-                        </Button>
-                    </Col>
-                    <Col>
-                        <Button onClick={this.gotoTodoPage}>
-                            TODO
-                        </Button>
-                    </Col>
-                </Row>
-            </Container>
+            <Navbar className="navbar-container" expand="md">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link onClick={this.gotoHomePage}>Home</Nav.Link>
+                        <Nav.Link onClick={this.gotoMoviesPage}>Movies</Nav.Link>
+                        <Nav.Link onClick={this.gotoTodoPage}>Trivia Game</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }

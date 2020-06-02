@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Col, Row, Button, Form } from 'react-bootstrap';
+import Lottie from 'react-lottie';
+import animationData from './assets/movie.json';
 
 class MoviesComponent extends React.Component {
     constructor(props) {
@@ -14,9 +16,19 @@ class MoviesComponent extends React.Component {
     }
 
     render() {
+        const defaultOptions = {
+            loop: true,
+            autoplay: true, 
+            animationData: animationData,
+            rendererSettings: {
+              preserveAspectRatio: 'xMidYMid slice'
+            }
+          };
         return (
-            <Container>
-                MOVIES
+            <Container className="mainContainer">
+                <Lottie options={defaultOptions}
+                                height="50%"
+                                width="50%"/>
             </Container>
         );
     }
